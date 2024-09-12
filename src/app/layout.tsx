@@ -1,9 +1,10 @@
 import type { Metadata } from "next";
-import { Noto_Sans } from "next/font/google";
+
+import { Manrope } from "next/font/google";
 import "../../styles/globals.css";
 import { cn } from "@/lib/utils";
 
-const ns = Noto_Sans({ subsets: ["latin"] });
+const manrope = Manrope({ subsets: ["latin"] });
 
 export const metadata: Metadata = {
   title: "Pollit - Real-time Q&A and polls",
@@ -17,7 +18,9 @@ export default function RootLayout({
 }>) {
   return (
     <html className="h-full" lang="en" suppressHydrationWarning>
-      <body className={cn("theme-yellow bg-zinc-100 h-full", ns.className)}>
+      <body
+        className={cn("theme-green bg-background h-full", manrope.className)}
+      >
         {children}
       </body>
     </html>
