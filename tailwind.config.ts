@@ -9,6 +9,7 @@ const config: Config = {
   ],
   theme: {
     extend: {
+
       animation: {
         ripple: "ripple var(--duration,2s) ease calc(var(--i, 0)*.2s) infinite",
       },

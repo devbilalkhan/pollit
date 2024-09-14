@@ -19,9 +19,7 @@ export default function RootLayout({
 }>) {
   return (
     <html className="h-full" lang="en" suppressHydrationWarning>
-      <body
-        className={cn("theme-green bg-background h-full", manrope.className)}
-      >
+      <body className={cn(" bg-background h-full", manrope.className)}>
         <ThemeProvider
           attribute="class"
           defaultTheme="system"
