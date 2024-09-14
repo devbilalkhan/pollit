@@ -3,6 +3,7 @@ import type { Metadata } from "next";
 import { Manrope } from "next/font/google";
 import "../../styles/globals.css";
 import { cn } from "@/lib/utils";
+import { ThemeProvider } from "@/components/theme-provider/theme-provider";
 
 const manrope = Manrope({ subsets: ["latin"] });
 
@@ -21,7 +22,14 @@ export default function RootLayout({
       <body
         className={cn("theme-green bg-background h-full", manrope.className)}
       >
-        {children}
+        <ThemeProvider
+          attribute="class"
+          defaultTheme="system"
+          enableSystem
+          disableTransitionOnChange
+        >
+          {children}
+        </ThemeProvider>
       </body>
     </html>
   );

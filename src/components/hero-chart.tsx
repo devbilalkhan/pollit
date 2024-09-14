@@ -9,7 +9,7 @@ import {
   CardDescription,
   CardHeader,
   CardTitle,
-} from "./ui/card";
+} from "@/components/ui/card";
 import {
   ChartConfig,
   ChartContainer,
@@ -17,7 +17,7 @@ import {
   ChartLegendContent,
   ChartTooltip,
   ChartTooltipContent,
-} from "./ui/chart";
+} from "@/components/ui/chart";
 
 export const description = "An interactive area chart";
 
@@ -146,8 +146,8 @@ export function HeroChart() {
   });
 
   return (
-    <Card className="w-full bg-background border-none">
-      <CardContent className="px-2 pt-4 sm:px-6 sm:pt-6 border-none">
+    <Card className="border-none h-[500px] -mt-10">
+      <CardContent className="px-2 pt-4 sm:px-6 sm:pt-6">
         <ChartContainer
           config={chartConfig}
           className="aspect-auto h-[250px] w-full"
@@ -179,21 +179,6 @@ export function HeroChart() {
                 />
               </linearGradient>
             </defs>
-            <CartesianGrid vertical={false} />
-            {/* <XAxis
-              dataKey="date"
-              tickLine={false}
-              axisLine={false}
-              tickMargin={8}
-              minTickGap={32}
-              tickFormatter={(value) => {
-                const date = new Date(value);
-                return date.toLocaleDateString("en-US", {
-                  month: "short",
-                  day: "numeric",
-                });
-              }}
-            /> */}
 
             <Area
               dataKey="mobile"
